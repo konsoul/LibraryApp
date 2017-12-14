@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="userForm.css">
+    <title>Library App</title>
+</head>
+
+<body>
+
+    <?php
+	
+$servername = "localhost";
+$username = "bradleyr_library";
+$password = "L!ghth0us3sF0r3v3r";
+$dbname = "bradleyr_libraryApp";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+echo "Connected successfully";
+	
+// Now we enter this into the DB
+
+
+$sql = "INSERT INTO users (firstName, lastName, email, phone, address, city, state, country, postalCode) 
+VALUES ('".$_POST['firstName']."','".$_POST['lastName']."','".$_POST['email']."','".$_POST['phone']."','".$_POST['address']."','".$_POST['city']."','".$_POST['state']."','".$_POST['country']."','".$_POST['postalCode']."')";
+
+if (mysqli_query($conn, $sql)) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+
+   ?>
+
+        <div id="glob_content">
+            <div id="title">New User</div>
+            <div id="form_content"></div>
+            <form id="form" method="post" action="new_user.php">
+                <input type="text" name="firstName" id="name" placeholder="First Name" />
+                <input type="text" name="lastName" id="name" placeholder="Last Name" />
+                <input type="email" name="email" id="email" placeholder="Email Address" />
+                <input type="tel" name="phone" id="phone" placeholder="Phone" />
+                <input type="text" name="address" id="name" placeholder="Address" />
+                <input type="text" name="city" id="name" placeholder="City" />
+                <input type="text" name="state" id="name" placeholder="State" />
+                <input type="text" name="country" id="name" placeholder="Country" />
+                <input type="text" name="postalCode" id="name" placeholder="Postal Code" />
+                <input type="submit" name="send" value="SEND" />
+            </form>
+        </div>
+
+</body>
+
+</html>
