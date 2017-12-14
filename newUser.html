@@ -43,14 +43,14 @@ if (mysqli_query($conn, $sql)) {
             <div id="title">New User</div>
             <div id="form_content"></div>
             <form id="form" method="post" action="new_user.php">
-                <input type="text" name="firstName" id="name" placeholder="First Name" />
-                <input type="text" name="lastName" id="name" placeholder="Last Name" />
-                <input type="email" name="email" id="email" placeholder="Email Address" />
-                <input type="tel" name="phone" id="phone" placeholder="Phone" />
-                <input type="text" name="address" id="name" placeholder="Address" />
-                <input type="text" name="city" id="name" placeholder="City" />
-                <input type="text" name="state" id="name" placeholder="State" />
-                <input type="text" name="country" id="name" placeholder="Country" />
+                <input type="text" name="firstName" class="formInfo" placeholder="First Name" />
+                <input type="text" name="lastName" class="formInfo" placeholder="Last Name" />
+                <input type="email" name="email" class="formInfo" placeholder="Email Address" />
+                <input type="tel" name="phone" class="formInfo" placeholder="Phone" />
+                <input type="text" name="address" class="formInfo" placeholder="Address" />
+                <input type="text" name="city" class="formInfo" placeholder="City" />
+                <input type="text" name="state" class="formInfo" placeholder="State" />
+                <input type="text" name="country" class="formInfo" placeholder="Country" />
                 <input type="text" name="postalCode" id="name" placeholder="Postal Code" />
                 <input type="submit" name="send" value="SEND" />
             </form>
