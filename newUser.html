@@ -9,44 +9,48 @@
 
 <body>
 
-    <?php
-	
-$servername = "localhost";
-$username = "bradleyr_library";
-$password = "L!ghth0us3sF0r3v3r";
-$dbname = "bradleyr_libraryApp";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
+    <!--     <?php
+        
+    $servername = "localhost";
+    $username = "bradleyr_library";
+    $password = "L!ghth0us3sF0r3v3r";
+    $dbname = "bradleyr_libraryApp";
+    
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    
+    // Check connection
+    if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
-echo "Connected successfully";
-	
-// Now we enter this into the DB
-
-
-$sql = "INSERT INTO users (firstName, lastName, email, phone, address, city, state, country, postalCode) 
-VALUES ('".$_POST['firstName']."','".$_POST['lastName']."','".$_POST['email']."','".$_POST['phone']."','".$_POST['address']."','".$_POST['city']."','".$_POST['state']."','".$_POST['country']."','".$_POST['postalCode']."')";
-
-if (mysqli_query($conn, $sql)) {
+    } 
+    echo "Connected successfully";
+        
+    // Now we enter this into the DB
+    
+    
+    $sql = "INSERT INTO users (firstName, lastName, email, phone, address, city, state, country, postalCode) 
+    VALUES ('".$_POST['firstName']."','".$_POST['lastName']."','".$_POST['email']."','".$_POST['phone']."','".$_POST['address']."','".$_POST['city']."','".$_POST['state']."','".$_POST['country']."','".$_POST['postalCode']."')";
+    
+    if (mysqli_query($conn, $sql)) {
     echo "New record created successfully";
-} else {
+    } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-}
+    }
+    
+       ?> -->
 
-   ?>
+    <div class="container">
+        <div class="imgback">
+            <img src="4249320-library.jpg">
+            <div class="title">Submit Books</div>
+        </div>
 
-        <div id="glob_content">
-            <div id="title">New User</div>
-            <div id="form_content"></div>
-            <form id="form" method="post" action="new_user.php">
+        <div class="formContainer">
+            <form class="form" method="post" action="new_user.php">
                 <input type="text" name="firstName" class="formInfo" placeholder="First Name" />
                 <input type="text" name="lastName" class="formInfo" placeholder="Last Name" />
                 <input type="email" name="email" class="formInfo" placeholder="Email Address" />
-                <input type="tel" name="phone" class="formInfo" placeholder="Phone" />
+                <input type="text" name="phone" class="formInfo" placeholder="Phone" />
                 <input type="text" name="address" class="formInfo" placeholder="Address" />
                 <input type="text" name="city" class="formInfo" placeholder="City" />
                 <input type="text" name="state" class="formInfo" placeholder="State" />
@@ -55,6 +59,7 @@ if (mysqli_query($conn, $sql)) {
                 <input type="submit" name="send" value="SEND" />
             </form>
         </div>
+    </div>
 
 </body>
 
