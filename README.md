@@ -2,6 +2,14 @@
 
 First : Download/Clone your fork using git@github.com:konsoul/LibraryApp.git
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+This is my edit - trappa
+=======
+This is a new edit.
+>>>>>>> tony
+This is my edit to the branch
+=======
 1. Edit file on local machine.
 2. Go into GitKraken and commit file.
 3. Push file so that it exists on the 'tony' fork on GitHub.
@@ -16,3 +24,6 @@ NOTE: You do not have to merge with master, in fact you can go back and make mor
 We can also merge changes from my fork to yours if needs be. 
 
 I'm going to edit this. This is my edit.
+>>>>>>> origin/master
+
+This is my edit
