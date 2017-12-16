@@ -12,7 +12,3 @@ First : Download/Clone your fork using git@github.com:konsoul/LibraryApp.git
 8. There is an option to merge with 'master'. 
 
 NOTE: You do not have to merge with master, in fact you can go back and make more changes and then push those to GitHub and those changes will show up in the pull request. Once all is well, we can then choose 'merge', and that will merge the changes from your fork to the master file. 
-
-We can also merge changes from my fork to yours if needs be. 
-
-I'm going to edit this. This is my edit.
